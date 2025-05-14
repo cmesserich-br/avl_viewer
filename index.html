@@ -29,9 +29,16 @@
     <div id="activeCallsigns"></div>
   </div>
 
+  <!-- 🧠 DOJO CONFIG MUST COME FIRST -->
+  <script>
+    window.dojoConfig = { async: true };
+  </script>
+
+  <!-- ArcGIS + Chart.js -->
   <script src="https://js.arcgis.com/4.29/"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+  <!-- ✅ APP LOGIC -->
   <script>
     require([
       "esri/Map",
@@ -95,7 +102,7 @@
           document.getElementById("startTime").value = minTime.toISOString().slice(0, 16);
           document.getElementById("endTime").value = maxTime.toISOString().slice(0, 16);
           document.getElementById("timeRangeDisplay").textContent =
-            `Range: ${minTime.toLocaleString()} - ${maxTime.toLocaleString()}`;
+            `Range: ${minTime.toLocaleString()} – ${maxTime.toLocaleString()}`;
         });
       }
 
@@ -172,7 +179,6 @@
       }
 
       document.getElementById("filterBtn").addEventListener("click", applyFilter);
-
       populateCallSigns();
       showTimeExtent();
     });

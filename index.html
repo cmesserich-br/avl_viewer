@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AVL Viewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://js.arcgis.com/4.29/esri/themes/light/main.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="viewDiv"></div>
+  <div id="controls">
+    <label for="vehicleSelect">Call Sign(s):</label>
+    <select id="vehicleSelect" multiple></select>
+
+    <label for="startTime">Start Time:</label>
+    <input type="datetime-local" id="startTime" />
+
+    <label for="endTime">End Time:</label>
+    <input type="datetime-local" id="endTime" />
+
+    <button id="filterBtn">Apply Filter</button>
+
+    <p id="timeRangeDisplay"></p>
+
+    <canvas id="activityChart" style="width:100%; max-width:300px;"></canvas>
+
+    <div id="activeCallsigns"></div>
+  </div>
+
+  <script src="https://js.arcgis.com/4.29/"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

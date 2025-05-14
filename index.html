@@ -30,6 +30,16 @@
 
   <script src="https://js.arcgis.com/4.29/"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="script.js"></script>
+  <script>
+  require([
+    "esri/Map",
+    "esri/views/MapView",
+    "esri/layers/FeatureLayer",
+    "esri/geometry/geometryEngine"
+  ], function (Map, MapView, FeatureLayer, geometryEngine) {
+    // ✅ Paste all of your JS logic here, exactly as it is in script.js
+  });
+</script>
+
 </body>
 </html>
